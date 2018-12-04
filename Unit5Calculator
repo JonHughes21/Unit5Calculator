@@ -1,0 +1,47 @@
+import java.util.Scanner;
+public class Unit5Calculator {
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		int num1 = 0, num2 = 0, digit;
+		System.out.println("Enter two numbers: ");
+		num1 = input.nextInt();
+		num2 = input.nextInt();
+		System.out.println("\nEnter 1 for Addition, 2 for Subtraction,");
+		System.out.println("3 for Multiplication, 4 for Division,");
+		System.out.println("and 5 to quit.");
+		digit = input.nextInt();
+		
+		while (digit != 5) {
+			if (digit == 1)
+				sum(num1, num2);
+			else if (digit == 2)
+				sub(num1, num2);
+			else if (digit == 3)
+				mult(num1, num2);
+			else if (digit == 4)
+				div(num1, num2);
+			
+			System.out.println("\nEnter 1 for Addition, 2 for Subtraction,");
+			System.out.println("3 for Multiplication, 4 for Division,");
+			System.out.println("and 5 to quit.");
+			digit = input.nextInt();
+		}			
+	}
+	public static void sum(int a, int b) {
+		int result = a + b;
+		System.out.printf("%d + %d = %d\n", a, b, result);
+	}
+	public static void sub(int a, int b) {
+		int result = a - b;
+		System.out.printf("%d - %d = %d\n", a, b, result);
+	}
+	public static void mult(int a, int b) {
+		int result = a * b;
+		System.out.printf("%d * %d = %d\n", a, b, result);
+	}
+	public static void div(int a, int b) {
+		int result = a / b;
+		System.out.printf("%d / %d = %d\n", a, b, result);
+	}
+}
